@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minesweeper &mdash; Dig the Field</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+
+    <div class="topbar">
+      <div class="avatar">🐱</div>
+      <div class="midstack">
+        <div class="healthbar">
+          <div id="health-fill" class="seg-full"></div>
+          <div class="seg-empty"></div>
+        </div>
+        <div class="pick-row">⛏ <span id="mine-count">5</span></div>
+      </div>
+      <button id="new-game-btn" class="exitbtn" title="New game">⟳</button>
+    </div>
+
+    <div class="controls">
+      <label class="ctrl">
+        <span class="ctrl-tag">FIELD</span>
+        <select id="difficulty">
+          <option value="easy">9×9 &middot; 10</option>
+          <option value="medium" selected>16×16 &middot; 40</option>
+          <option value="hard">16×30 &middot; 99</option>
+        </select>
+      </label>
+      <div class="counters">
+        <div class="chip status-chip" id="status-face" title="Restart">
+          <span id="status-icon">🙂</span>
+        </div>
+        <div class="chip">⏱ <span id="timer">000</span></div>
+      </div>
+    </div>
+
+    <div class="board-well">
+      <div id="board" class="board"></div>
+    </div>
+
+    <div class="caption">Left-click to dig &middot; right-click to flag</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
